@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: my_app_php
+    working_dir: /app
+    volumes:
+      - ../../cakephp/entregablef/app_ef:/app:Z
+    network_mode: "host"
+    stdin_open: true
+    tty: true
